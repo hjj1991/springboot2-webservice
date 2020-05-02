@@ -23,4 +23,11 @@ public class IndexControllerTest {
         //then
         Assertions.assertThat(body).contains("스프링부트로 시작하는 웹서비스");
     }
+
+
+    @Test
+    public void 수정페이지_로딩() {
+        //when
+        String body = this.restTemplate.getForObject("/posts/update/{id}", String.class);
+    }
 }
